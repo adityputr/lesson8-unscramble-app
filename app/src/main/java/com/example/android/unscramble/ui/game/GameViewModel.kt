@@ -13,6 +13,8 @@ class GameViewModel : ViewModel() {
     private var _currentScrambledWord = "tesss"
     val currentScrambleWord: String
         get() = _currentScrambledWord
+    private var wordsList: MutableList<String> = mutableListOf()
+    private lateinit var currentWord: String
 
     init {
         Log.d("Game Fragment", "GameViewModel created!")

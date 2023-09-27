@@ -17,7 +17,8 @@ class GameViewModel : ViewModel() {
     private lateinit var currentWord: String
 
     init {
-        Log.d("Game Fragment", "GameViewModel created!")
+        Log.d("GameFragment", "GameViewModel created!")
+        getNextWord()
     }
 
     override fun onCleared() {

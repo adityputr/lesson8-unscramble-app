@@ -8,7 +8,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
-import java.lang.reflect.Array.get
 
 class GameViewModel : ViewModel() {
     private val _score = MutableLiveData(0)
@@ -42,11 +41,6 @@ class GameViewModel : ViewModel() {
     init {
         Log.d("GameFragment", "GameViewModel created!")
         getNextWord()
-    }
-
-    override fun onCleared() {
-        super.onCleared()
-        Log.d("GameFragment", "GameViewModel destroyed!")
     }
 
     private fun getNextWord() {
